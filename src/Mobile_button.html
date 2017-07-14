@@ -23,7 +23,27 @@
     <div data-role="page" id="pagetwo">
         <div data-role="content">
             <!--行内按钮-->
-            <a href="#pageone" data-role="button" data-inline="true">转到页面1</a>
+            <a href="#pagetree" data-role="button" data-inline="true">转到页面3</a>
+        </div>
+
+    </div>
+
+
+    <!--组合按钮 分水平和垂直方向 horizontal|vertical-->
+    <div data-role="page" id="pagetree">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="javascript:alert('弹框')" data-role="button">按钮1</a>
+            <!--data-corners	true | false	规定按钮是否有圆角。-->
+            <a href="#pagefour" data-role="button" data-corners="true">进入返回按钮</a>
+            <!--data-shadow	true | false	规定按钮是否有阴影。-->
+            <a href="#pageone" data-role="button" data-shadow="true">按钮1</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="pagefour">
+        <div data-role="content">
+            <!--data-mini	true | false	规定是否是小型按钮。-->
+            <a href="#" data-role="button" data-rel="back" data-mini="true">返回</a>
         </div>
     </div>
 

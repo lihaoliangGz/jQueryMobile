@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 工具栏</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!--<div data-role="page" >-->
+        <!--<div data-role="header">-->
+            <!--<a href="#" data-role="button" data-icon="home">首页</a>-->
+            <!--<h1>欢迎进入我的首页</h1>-->
+            <!--<a href="#" data-role="button" data-icon="search">搜索</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div data-role="page" >
+        <div data-role="header" data-position="inline" >
+            <!--<a href="#" data-role="button" data-icon="home">首页</a>-->
+            <h1>欢迎进入我的首页</h1>
+            <a href="#" data-role="button" data-icon="search" class="ui-btn-right">搜索</a>
+        </div>
+
+        <div data-role="content">
+            <p>网页内容</p>
+
+        </div>
+
+        <div data-role="footer" class="ui-btn" data-position="fixed" data-fullscreen="true">
+            <div data-role="controlgroup" data-type="vertical">
+                <a href="#" data-role="button" data-icon="plus">新浪微博</a>
+                <a href="#" data-role="button" data-icon="plus">腾讯</a>
+                <a href="#" data-role="button" data-icon="plus">人人网</a>
+                <a href="#" data-role="button" data-icon="plus">妹子图</a>
+            </div>
+        </div>
+        <!--定位页眉和页脚
+            放置页眉和页脚的方式有三种：
+            Inline - 默认。页眉和页脚与页面内容位于行内。
+            Fixed - 页面和页脚会留在页面顶部和底部。
+            Fullscreen - 与 fixed 类似;页面和页脚会留在页面顶部和底部，but also over the page content. It is also slightly see-through-->
+    </div>
+
+
+
+</body>
+</html>
