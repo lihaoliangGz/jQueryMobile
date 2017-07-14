@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 按钮</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!--<button>按钮</button>-->
+    <!--<input type="button" value="按钮2"/>-->
+    <!--<a href="javascritp:" data-role="button">按钮3</a>-->
+
+
+    <div data-role="page" id="pageone">
+        <div data-role="content">
+            <a href="#pagetwo" data-role="button">转到页面2</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="pagetwo">
+        <div data-role="content">
+            <!--行内按钮-->
+            <a href="#pageone" data-role="button" data-inline="true">转到页面1</a>
+        </div>
+    </div>
+
+
+</body>
+</html>

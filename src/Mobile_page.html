@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 页面</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!--使用 jQuery Mobile 入门-->
+<!--<div data-role="page">-->
+
+    <!--<div data-role="header">-->
+        <!--<h1>欢迎访问我的主页</h1>-->
+    <!--</div>-->
+
+    <!--<div data-role="content">-->
+        <!--<p>我是一名移动开发者！</p>-->
+    <!--</div>-->
+
+    <!--<div data-role="footer">-->
+        <!--<h1>页脚文本</h1>-->
+    <!--</div>-->
+
+<!--</div>-->
+
+
+<!--在单个html文件中创建多个页面-->
+<!--<div>-->
+
+    <!--<div data-role="page" id="pageone">-->
+        <!--<div data-role="content">-->
+            <!--<a href="#pagetwo">转到页面二</a>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+    <!--<div data-role="page" id="pagetwo">-->
+        <!--<div data-role="content">-->
+            <!--<a href="#pageone">转到页面一</a>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+<!--</div>-->
+
+
+<!--将页面用作对话框-->
+<div data-role="page" id="pageone">
+    <div data-role="content">
+        <a href="#pagetwo" data-rel="dialog">转到页面二</a>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="content">
+        <a href="#pageone">转到页面一</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
