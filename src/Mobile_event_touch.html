@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Touch 事件</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        /**
+         * tap 事件在用户敲击某个元素时触发。
+         */
+//        $(document).on('pageinit','#pageone',function () {
+//            $('p').on('tap', function () {
+//                $(this).hide();
+//            });
+//        });
+
+        /**
+         * taphold 事件在用户敲击某个元素并保持一秒时被触发：
+         */
+//        $(document).on('pageinit','#pageone',function () {
+//            $('p').on('taphold',function () {
+//                $(this).hide();
+//            });
+//        });
+
+        /**
+         * swipe 事件在用户在某个元素上水平滑动超过 30px 时被触发：
+         */
+//        $(document).on('pageinit', '#pageone', function () {
+//            $('p').on('swipe',function () {
+//                console.log("滑动了");
+//                //$(this).innerHTML = 'HelloWorld';
+//            });
+//        });
+
+        /**
+         * swipeleft 事件在用户在某个元素上从左滑动超过 30px 时被触发：
+         */
+        $(document).on('pageinit', '#pageone', function () {
+            $('p').on('swipeleft',function () {
+                console.log("滑动了");
+                //$(this).innerHTML = 'HelloWorld';
+            });
+        });
+
+        /**
+         * swiperight 事件在用户在某个元素上从右滑动超过 30px 时被触发：
+         */
+//        $(document).on('pageinit', '#pageone', function () {
+//            $('p').on('swiperight',function () {
+//                console.log("滑动了");
+//                //$(this).innerHTML = 'HelloWorld';
+//            });
+//        });
+    </script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>触控 事件</h1>
+    </div>
+
+    <div data-role="content">
+        <p>敲击我，我会消失。</p>
+        <p>敲击我，我会消失。</p>
+        <p>敲击我，我也会消失。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+</body>
+</html>

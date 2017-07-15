@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 列表</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <h4>有序列表:</h4>
+    <!--如果您的列表是字母顺序的（比如通讯录），jQuery Mobile 自动添加恰当的分隔符，通过在 <ol> 或 <ul> 元素上设置 data-autodividers="true" 属性：-->
+    <ol data-role="listview" data-autodividers="true">
+        <li><a href="http://www.baidu.com">百度</a></li>
+        <li><a href="http://github.com">github</a></li>
+        <li>列表3</li>
+    </ol>
+
+    <h4>无序列表:</h4>
+    <!--添加列表和外边距data-inset="true"  在列表中添加搜索框，请使用 data-filter="true" 属性：  -->
+    <!--修改输入框的提示文本data-filter-placeholder="搜索姓名"-->
+    <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="请输入内容">
+        <!--列表分隔符 , 向 <li> 元素添加 data-role="list-divider" 属性：-->
+        <li data-role="list-divider"><a href="http://www.baidu.com">百度</a></li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+</body>
+</html>

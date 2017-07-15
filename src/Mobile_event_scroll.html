@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 滚动事件</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        /**
+         * scrollstart 事件在用户开始滚动页面时被触发：
+         */
+        $(document).on('scrollstart',function () {
+            //alert('开始滚');
+            console.log('开始滚');
+        });
+
+        /**
+         * scrollstop 事件在用户停止滚动页面时被触发：
+         */
+        $(document).on('scrollstop', function () {
+            console.log('结束滚');
+        });
+    </script>
+</head>
+<body>
+<!--<div data-role="page" id="pageone">-->
+    <!--<div data-role="header">-->
+        <!--<h1>滚动 事件</h1>-->
+    <!--</div>-->
+
+    <!--<div data-role="content">-->
+        <!--<p>一段内容</p>-->
+        <!--<p>敲击我，我会消失。</p>-->
+        <!--<p>敲击我，我也会消失。</p>-->
+    <!--</div>-->
+
+    <!--<div data-role="footer">-->
+        <!--<h1>页脚文本</h1>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+</html>

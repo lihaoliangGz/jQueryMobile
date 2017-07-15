@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 表单滑块</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="content">
+        <form method="get" action="#">
+            <div data-role="fieldcontain">
+                <label for="points">Points:</label>
+                <!--如果您希望突出显示截止滑块值的这段轨道，请添加 data-highlight="true"-->
+                <input type="range" name="points" id="points" value="50" min="0" max="100"step="any" data-highlight="true"/>
+            </div>
+
+            <div data-role="fieldcontain">
+                <label for="switch">开关</label>
+                <!--如果您希望突出显示截止滑块值的这段轨道，请添加 data-highlight="true"-->
+                <select data-role="slider" name="switch" id="switch" >
+                    <option value="off" selected="selected">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

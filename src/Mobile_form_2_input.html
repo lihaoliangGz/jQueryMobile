@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile表单输入元素</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="content">
+        <form method="get" action="#">
+            <div data-role="fieldcontain">
+
+                <label for="fullname">全名:</label>
+                <input type="text" name="fullname" id="fullname"/>
+
+                <label for="bday">生日:</label>
+                <input type="date" name="bday" id="bday"/>
+
+                <label for="email">电邮:</label>
+                <input type="email" name="email" id="email" placeholder="你的邮箱地址..."/>
+
+                <label for="info">Additional Information:</label>
+                <textarea name="addinfo" id="info"></textarea>
+
+                <label for="search">搜索:</label>
+                <input type="search" name="search" id="search" placeholder="输入搜索内容"/>
+
+
+            </div>
+
+            <fieldset data-role="controlgroup">
+                <legend>请选择性别:</legend>
+                <label for="male">男:</label>
+                <input type="radio" name="gender" id="male" value="male"/>
+                <label for="female">女:</label>
+                <input type="radio" name="gender" id="female" value="female"/>
+            </fieldset>
+
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>请选择颜色:</legend>
+                <label for="red">red:</label>
+                <input type="checkbox" name="color" id="red" value="red" checked="checked"/>
+                <label for="green">green:</label>
+                <input type="checkbox" name="color" id="green" value="green" checked/>
+                <label for="blue">blue:</label>
+                <input type="checkbox" name="color" id="blue" value="blue"/>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+</html>

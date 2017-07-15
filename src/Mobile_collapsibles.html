@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 可折叠</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <div data-role="collapsible" data-collapsed="false">
+        <h1>可折叠的</h1>
+        <p>可折叠的内容</p>
+
+        <!--嵌套的可折叠块 , 通过 data-mini 最小化 collapsibles--   通过 data-collapsed-icon 和 data-expanded-icon 改变图标-->
+        <div data-role="collapsible" data-mini="true" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+            <h1>嵌套的可折叠块</h1>
+            <p>嵌套的可折叠内容</p>
+        </div>
+    </div>
+
+    <div style="height: 100px; background-color: yellow">
+
+    </div>
+
+    <div data-role="collapsible-set">
+        <div data-role="collapsible">
+            <h1>点击我可折叠</h1>
+            <p>被展开的内容</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h1>点击我可折叠</h1>
+            <p>被展开的内容</p>
+        </div>
+        <div data-role="collapsible">
+            <h1>点击我可折叠</h1>
+            <p>被展开的内容</p>
+        </div>
+
+        <div data-role="collapsible">
+            <h1>点击我可折叠</h1>
+            <p>被展开的内容</p>
+        </div>
+    </div>
+
+</body>
+</html>

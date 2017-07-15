@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 页面事件 过渡</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        /**
+         * 页面过渡涉及两个页面：一张“来”的页面和一张“去”的页面 - 这些过渡使当前活动页面（“来的”页面）到新页面（“去的”页面的改变过程变得更加动感。
+         *
+         * pagebeforeshow	在“去的”页面触发，在过渡动画开始前。
+         * pageshow	在“去的”页面触发，在过渡动画完成后。
+         * pagebeforehide	在“来的”页面触发，在过渡动画开始前。
+         * pagehide	在“来的”页面触发，在过渡动画完成后。
+         */
+        $(document).on("pagebeforeshow","#pagetwo",function(){ //当进入页面二时
+            console.log("页面二即将显示");
+        });
+        $(document).on("pageshow","#pagetwo",function(){ //当进入页面二时
+            console.log("现在显示页面二");
+        });
+        $(document).on("pagebeforehide","#pagetwo",function(){ //当离开页面二时
+            console.log("页面二即将隐藏");
+        });
+        $(document).on("pagehide","#pagetwo",function(){ //当离开页面二时
+            console.log("现在隐藏页面二");
+        });
+    </script>
+
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>页眉文本</h1>
+
+    </div>
+
+    <div data-role="content">
+        <p>页面一</p>
+        <a href="#pagetwo">转到页面二</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>页眉文本</h1>
+
+    </div>
+
+    <div data-role="content">
+        <p>页面二</p>
+        <a href="#pageone">转到页面一</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+</body>
+</html>
