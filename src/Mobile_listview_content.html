@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 列表内容</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .abc{
+            width: 16px;
+            height: 16px;
+        }
+
+        body{
+            padding-bottom: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" id="pagehome">
+        <h4>有序列表:</h4>
+       
+        <ol data-role="listview" data-autodividers="true">
+            <li><a href="http://www.baidu.com">百度</a></li>
+            <li><a href="http://github.com">github</a></li>
+            <li>列表3</li>
+        </ol>
+
+        <h4>无序列表:</h4>
+
+        <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="请输入内容">
+
+            <li data-role="list-divider"><a href="http://www.baidu.com">百度</a></li>
+            <!--如需向列表添加 16x16px 的图标，请向 <img> 元素添加 class="ui-li-icon" 属性-->
+            <li><a href="javascript:alert('跳转到谷歌')"><img src="img/chrome.png" class="ui-li-icon">谷歌</a></li>
+            <li><a href="javascript:alert('跳转到火狐')"><img src="img/firefox.png" class="abc">火狐</a></li>
+            <li>
+                <a href="#">
+                    <img src="img/chrome.png">
+                    <h2>Google Chrome</h2>
+                    <p>Google Chrome 免费的开源 web 浏览器。发布于 2008 年。</p>
+                </a>
+            </li>
+
+            <!--拆分按钮-->
+            <!--如需创建带有垂直分隔栏的拆分列表，请在 <li> 元素内放置两个链接。
+                jQuery Mobile 会自动为第二个链接添加蓝色箭头图标的样式，链接中的文本（如有）将在用户划过该图标时显示：
+            -->
+            <li>
+                <a href="#"><img src="img/chrome.png"></a>
+                <a href="http://www.baidu.com">点击进入网站</a>
+            </li>
+
+            <!--通过添加页面和对话框，可使链接的功能更强：-->
+            <li>
+                <a href="#"><img src="img/chrome.png"></a>
+                <a href="#download" data-rel="dialog" data-transition="pop">点击进入网站</a>
+            </li>
+        </ul>
+
+        <!--可折叠列表-->
+        <div data-role="collapsible">
+            <h4> 邮箱</h4>
+            <ul data-role="listview">
+                <li><a>收件箱<span class="ui-li-count">12</span></a></li>
+                <!--更改列表的默认链接图标-->
+                <li data-icon="delete"><a>发件箱</a></li>
+                <li><a>垃圾箱</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div data-role="page" id="download">
+        <div data-role="content">
+            <h3>拆分按钮实例</h3>
+            <p>该按钮仅供演示。</p>
+            <a href="#" data-role="button" data-rel="back" data-icon="check" data-inline="true" data-mini="true">下载</a>
+            <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true">取消</a>
+        </div>
+    </div>
+</body>
+</html>

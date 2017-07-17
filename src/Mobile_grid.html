@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile网格</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style >
+        .ui-block-a,
+        .ui-block-b,
+        .ui-block-c
+        {
+            background-color: lightgray;
+            border: 1px solid black;
+            height: 200px;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <div data-role="content">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <a href="#" data-role="button">第一个按钮</a>
+                <p>第一个按钮对应的内容</p>
+            </div>
+
+            <div class="ui-block-b">
+                <a href="#" data-role="button">第2个按钮</a>
+                <p>第2列：This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+        </div>
+
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <a href="#" data-role="button">第一个按钮</a>
+                <p>第一个按钮对应的内容</p>
+            </div>
+
+            <div class="ui-block-b">
+                <a href="#" data-role="button">第2个按钮</a>
+                <p>第2列：This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+
+            <div class="ui-block-c">
+                <a href="#" data-role="button">第3个按钮</a>
+                <p>第3列：This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+
+            <!--多行-->
+            <div class="ui-block-a">
+                <a href="#" data-role="button">第1个按钮</a>
+                <p>第1列：This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+
+            <div class="ui-block-b">
+                <a href="#" data-role="button">第2个按钮</a>
+                <p>第2列：This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+            <div class="ui-block-a">
+                <a href="#" data-role="button">第1个按钮</a>
+                <p>第1列：This is some text. This is some text. This is some text. This is some text.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 方向事件</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        /**
+         * orientationchange 事件在用户垂直或水平旋转移动设备时被触发
+         *
+         * callback 函数可以设置一个参数，即 event 对象，它会返回移动设备的方向：
+         * "portrait" （设备被握持的方向是垂直的）或 "landscape" （设备被握持的方向是水平的）：
+         */
+//        $(window).on('orientationchange',function (event) {
+//            console.log('方向已经改变 : ' + event.orientation);
+//
+//        });
+
+        /**
+         *由于 orientationchange 事件与 window 对象绑定，我们能够使用 window.orientation 属性。
+         *
+         * 测试失败
+         */
+        $(document).on("pageinit",function(event){
+            $(window).on("orientationchange",function(){
+                console.log('window方向'+window.orientation);
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

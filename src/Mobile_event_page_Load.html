@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 页面事件 Load</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+
+
+        /**
+         * jQuery Mobile Load 事件
+         * 无论外部页面何时载入 DOM，将触发两个事件。第一个是 pagebeforeload，第二个是 pageload （成功）或 pageloadfailed（失败）。
+         *
+         * pagebeforeload    在任何页面加载请求作出之前触发。
+         * pageload    在页面已成功加载并插入 DOM 后触发。
+         * pageloadfailed    如果页面加载请求失败，则触发该事件。默认地，将显示 "Error Loading Page" 消息。
+         */
+        $(document).on('pagebeforeload',function (event,data) {
+            console.log('触发pagebeforeload事件,url='+data.url);
+        });
+
+        $(document).on('pageload',function (event,data) {
+            console.log('触发pageload事件,url='+data.url);
+        });
+
+        $(document).on('pageloadfailed',function (event,data) {
+            console.log('触发pageloadfailed事件,url='+data.url);
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <div data-role="page">
+        <div data-role="header">
+            <h1>页眉文本</h1>
+        </div>
+
+        <div data-role="content">
+            <a href="index.html">外部页面</a>
+            <br><br>
+            <a href="externalnotexist.html">外部页面不存在。</a>
+        </div>
+
+        <div data-role="footer">
+            <h1>页脚文本</h1>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

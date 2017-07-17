@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 表单基础</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!--在 jQuery Mobile 中提交表单
+提示：jQuery Mobile 会自动通过 AJAX 进行表单提交，并会尝试将服务器响应整合入应用程序的 DOM 中。-->
+
+<div data-role="page">
+    <div data-role="content">
+        <form method="get" action="#">
+            <!--域容器:用带有 data-role="fieldcontain" 属性的 <div> 或 <fieldset> 元素来包装 label 或表单元素：-->
+            <div data-role="fieldcontain">
+                <!--隐藏label:  class="ui-hidden-accessible"-->
+                <!--<label for="fname" class="ui-hidden-accessible">姓名:</label>-->
+                <label for="fname" >姓名:</label>
+                <!--如需避免 jQuery Mobile 自动为可点击元素设置样式，请使用 data-role="none" 属性-->
+                <input type="text" name="fname" id="fname" placeholder="姓名..." data-role="none"/>
+                <input type="submit" data-inline="true" value="提交"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

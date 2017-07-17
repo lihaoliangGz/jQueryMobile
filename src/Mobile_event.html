@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 事件</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        /**
+         * jQuery document ready 事件,使用文档 ready 事件来阻止 jQuery 代码在文档结束加载 (is ready) 前运行：
+         */
+//        $(document).ready(function () {
+//            $('p').click(function () {
+//                $(this).hide();
+//            });
+
+//            $('p').on('click',function () {
+//                $(this).hide();
+//            })
+//        });
+
+        //测试ready和pageinit事件触发顺序。pageinit事件先触发
+        $(document).ready(function () {
+            console.log('ready事件触发');
+        })
+
+
+        /**
+         *使用 pageinit 事件，该事件在页面已初始化并完善样式设置后发生。
+         * 第二个参数指向 页面("#pageone")
+         */
+        $(document).on('pageinit','#pageone',function () {
+            console.log('pageinit事件触发')
+            $('p').on('click',function () {
+                $(this).hide();
+            })
+        })
+
+
+    </script>
+</head>
+<body>
+<p>如果您点击我，我会消失。</p>
+<p>点击我，我会消失。</p>
+<p>点击我，我也会消失。</p>
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>页眉文本</h1>
+    </div>
+
+    <div data-role="content">
+        <p>如果您点击我，我会消失。</p>
+        <p>点击我，我会消失。</p>
+        <p>点击我，我也会消失。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+
+
+</body>
+</html>

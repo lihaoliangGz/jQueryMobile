@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile 主题</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <!--主题混合使用-->
+    <div data-role="header" data-theme="b">
+        <h1>此处是页面标题</h1>
+    </div>
+
+    <div data-role="content" data-theme="a">
+        <p>此处是内容。</p>
+        <a href="#" data-role="button">按钮</a>
+        <p>此处是 <a href="javascript:alert('青春')">链接</a>！</p>
+        <p><a href="#pagetwo" data-rel="dialog">进入</a>下一页</p>
+
+        <!--主题化的按钮-->
+        <a href="#" data-role="button" data-theme="c">button1</a>
+        <a href="#" data-role="button" data-theme="a">button2</a>
+        <a href="#" data-role="button" data-theme="b">button3</a>
+
+        <!--主题化的图标-->
+        <a href="#" data-role="button" data-icon="plus" data-theme="e" data-iconpos="right">Plus</a>
+
+        <!--主题化的可折叠按钮和内容-->
+        <div data-role="collapsible" data-theme="b" data-content-theme="e">
+            <h1>Click me - I'm collapsible!</h1>
+            <p>I'm the expanded content.</p>
+        </div>
+    </div>
+
+    <div data-role="footer" data-theme="e">
+        <h1>此处是页脚文本</h1>
+    </div>
+</div>
+
+<!--主题化的对话框-->
+<div data-role="page" id="pagetwo" data-overlay-theme="e">
+    <div data-role="header" data-theme="b">
+        <h1>我是主题化的对话框</h1>
+    </div>
+
+    <div data-role="content" data-theme="a">
+        <p>data-overlay-theme 属性规定对话框出现在其上的页面的背景色。</p>
+        <a href="#pageone">转到页面一</a>
+    </div>
+
+    <div data-role="footer" data-theme="c">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+
+
+</body>
+</html>
